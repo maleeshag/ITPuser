@@ -12,7 +12,6 @@ const Welcome = () => {
 
             <h1>Welcome!</h1>
 
-            {/* <p><Link to="/dash/notes">View techNotes</Link></p> */}
 
             <p><Link to="/dash/organizations">View Organization Settings</Link></p>
             <p><Link to="/dash/notes/new">Add New Organization</Link></p>

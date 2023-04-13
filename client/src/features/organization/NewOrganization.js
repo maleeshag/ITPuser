@@ -1,11 +1,14 @@
 import { useSelector } from 'react-redux'
-import { selectAllOrganizations } from '../organization/organization'
+import { selectAllUsers } from '../users/userApiSlice'
 import NewOrganizationForm from './NewOrganizationForm'
 
 const NewOrganization = () => {
-    const organizations = useSelector(selectAllOrganizations)
+    const users = useSelector(selectAllUsers)
 
-    const content = organizations ? <NewOrganizationForm users={users} /> : <p>Loading...</p>
+    if (!users?.length) return <p>Not Currently Available</p>
+
+
+    const content = <NewOrganizationForm users={users} />
 
     return content
 }

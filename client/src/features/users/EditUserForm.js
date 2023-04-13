@@ -66,7 +66,7 @@ const EditUserForm = ({ user }) => {
 
     const onSaveUserClicked = async (e) => {
         if (password) {
-            await updateUser({ id: user.id, username, password, roles, active })
+            await updateUser({id:user.id, username, password, roles, active })
         } else {
             await updateUser({ id: user.id, username, roles, active })
         }
@@ -138,7 +138,7 @@ const EditUserForm = ({ user }) => {
                     onChange={onUsernameChanged}
                 />
 
-                <label className="form__label" htmlFor="password">
+                {/* <label className="form__label" htmlFor="password">
                     Password: <span className="nowrap">[empty = no change]</span> <span className="nowrap">[4-12 chars incl. !@#$%]</span></label>
                 <input
                     className={`form__input ${validPwdClass}`}
@@ -147,7 +147,7 @@ const EditUserForm = ({ user }) => {
                     type="password"
                     value={password}
                     onChange={onPasswordChanged}
-                />
+                /> */}
 
                 <label className="form__label form__checkbox-container" htmlFor="user-active">
                     ACTIVE:

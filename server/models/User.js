@@ -6,6 +6,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    // fullname:{
+    //     type:String,
+    //     required:true
+    // },
     email: {
         type: String,
         required: true
@@ -21,7 +25,14 @@ const userSchema = new mongoose.Schema({
     active: {
         type: Boolean,
         default: true
-    }
+    },
+    // gender:{
+    //     type:String,
+    //     required:true
+    // },
+    // address:{
+    //     type:String,
+    // }
 })
 
 module.exports = mongoose.model('User', userSchema)
